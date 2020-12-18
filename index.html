@@ -1,1397 +1,1435 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="script/filter.js"></script>
-        <script src="https://kit.fontawesome.com/0bbf47f20a.js" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="style/main.css">
-        <link rel="shortcut icon" href="images/logo.jpg">
-        <title>Gary Null's | All Items</title>
-    </head>
-    <body>
-        <div class="notification" id="notification">
-            <p><span id="sale-type"></span>Get 20% Off <i class="far fa-times-circle"></i></p>
+   <head>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="script/filter.js"></script>
+      <script src="https://kit.fontawesome.com/0bbf47f20a.js" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="style/main.css">
+      <link rel="shortcut icon" href="images/logo.jpg">
+      <title>Gary Null's | All Items</title>
+   </head>
+   <body>
+        <div class="password-modal">
+            <form>
+                <input id="pass" type="password" placeholder="Enter passcode" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" maxlength="4" autofocus>
+            </form>
         </div>
-        <header>
-                <div class="logo"></div>
-                <nav>
-                    <a href="index.html" class="active">All Items</a>
-                    <a href="bulk.html">Bulk</a>
-                    <a href="produce.html">Produce</a>
-                </nav>
-        </header>
-        <div class="max-width">
-            <div class="search-wrap">
-                <input id="search-box" type="text" placeholder="Search by product name, code or price" autofocus>
-                <img class="search-icon" src="images/search.png" width="100%;">
-            </div>
-            
-            <ul id="product-list">
-                <!--BULK-->
-                <li class="category-li">
-                    <h1 class="category-heading">Nuts</h1>
-                    <ul class="inner-ul">
-                        <li>
-                            <h3 class="product-code">b232</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/232.jpg)"></div>
-                                <p class="product-name">shredded cocount</p>
-                                <p class="product-price"></p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b239</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/239.jpeg)"></div>
-                                <p class="product-name">raw hazelnuts</p>
-                                <p class="product-price"></p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b241</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/241.jpg)"></div>
-                                <p class="product-name">raw almonds</p>
-                                <p class="product-price"></p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b242</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/242.jpg)"></div>
-                                <p class="product-name">roasted almonds "unsalted"</p>
-                                <p class="product-price"></p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b243</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/243.jpg)"></div>
-                                <p class="product-name">tamari almonds</p>
-                                <p class="product-price"></p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b244</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/244.jpg)"></div>
-                                <p class="product-name">roasted almonds "salted"</p>
-                                <p class="product-price"></p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b245</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/245.jpg)"></div>
-                                <p class="product-name">raw almonds "sliced"</p>
-                                <p class="product-price"></p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b246</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/246.jpg)"></div>
-                                <p class="product-name">raw cashews "whole"</p>
-                                <p class="product-price"></p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b247</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/247.jpg)"></div>
-                                <p class="product-name">cashew pieces</p>
-                                <p class="product-price"></p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b248</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/248.jpg)"></div>
-                                <p class="product-name">roasted cashew "salted"</p>
-                                <p class="product-price"></p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b249</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/249.jpg)"></div>
-                                <p class="product-name">roasted cashew "unsalted"</p>
-                                <p class="product-price"></p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b250</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/250.jpg)"></div>
-                                <p class="product-name">brazil nuts</p>
-                                <p class="product-price"></p>
-                            </div>
-                        </li>
-                        
-                        
-                        <li>
-                            <h3 class="product-code">b253</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/253.jpg)"></div>
-                                <p class="product-name">raw pecans</p>
-                                <p class="product-price"></p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b257</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/257.jpg)"></div>
-                                <p class="product-name">raw walnuts</p>
-                                <p class="product-price"></p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b272</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/272.jpg)"></div>
-                                <p class="product-name">raw macadamia</p>
-                                <p class="product-price"></p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b273</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/273.jpg)"></div>
-                                <p class="product-name">roasted peanuts "salted"</p>
-                                <p class="product-price"></p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b275</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/275.jpeg)"></div>
-                                <p class="product-name">raw pistachios "no shells"</p>
-                                <p class="product-price"></p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b276</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/276.jpg)"></div>
-                                <p class="product-name">roasted salted pistachios</p>
-                                <p class="product-price"></p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b280</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/280.jpg)"></div>
-                                <p class="product-name">roasted mixed nuts "unsalted"</p>
-                                <p class="product-price"></p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b281</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/281.png)"></div>
-                                <p class="product-name">roasted mixed nuts "salted"</p>
-                                <p class="product-price"></p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b282</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/282.jpg)"></div>
-                                <p class="product-name">roasted unsalted peanuts</p>
-                                <p class="product-price"></p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b283</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/283.jpg)"></div>
-                                <p class="product-name">Raw peanuts</p>
-                                <p class="product-price"></p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b669</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/669.jpg)"></div>
-                                <p class="product-name">Tierra raw mix</p>
-                                <p class="product-price"></p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b699</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/699.jpg)"></div>
-                                <p class="product-name">tierra trail mix</p>
-                                <p class="product-price"></p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b700</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/700.jpg)"></div>
-                                <p class="product-name">curry cashews</p>
-                                <p class="product-price"></p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b701</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/no-img.png); pointer-events: none"></div>
-                                <p class="product-name">maple ginger cashews</p>
-                                <p class="product-price"></p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b889</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/889.jpg)"></div>
-                                <p class="product-name">cajun cashews</p>
-                                <p class="product-price"></p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b897</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/897.jpg)"></div>
-                                <p class="product-name">maple glazed mixed nuts</p>
-                                <p class="product-price"></p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b990</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/990.jpg)"></div>
-                                <p class="product-name">carob peanut clusters</p>
-                                <p class="product-price"></p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b994</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/994.jpg)"></div>
-                                <p class="product-name">deluxe trail mix</p>
-                                <p class="product-price"></p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b995</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/995.jpg)"></div>
-                                <p class="product-name">maple cinnamon walnuts</p>
-                                <p class="product-price"></p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b998</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/998.jpg)"></div>
-                                <p class="product-name">goji berries</p>
-                                <p class="product-price"></p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b2388</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/2388.jpg)"></div>
-                                <p class="product-name">very berry mix</p>
-                                <p class="product-price"></p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b2422</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/2422.jpg)"></div>
-                                <p class="product-name">cocoa dusted choco almonds</p>
-                                <p class="product-price"></p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b2466</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/2466.jpg)"></div>
-                                <p class="product-name">sea salt &amp; onion cashews</p>
-                                <p class="product-price"></p>
-                            </div>
-                        </li>
-                        
-                        
-                        
-                    </ul>
-                </li>
-                <li class="category-li">
-                    <h1 class="category-heading">Dried Fruits</h1>
-                    <ul class="inner-ul">
-                        <li>
-                            <h3 class="product-code">B1</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/wasabi.png)"></div>
-                                <p class="product-name">Wasabi Green Peas</p>
-                                <p class="product-price">$5.29/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">B4</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/chamomile.jpg)"></div>
-                                <p class="product-name">Chamomile Flares</p>
-                                <p class="product-price">$14.99/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">B201</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/dried%20cranberries.jpg)"></div>
-                                <p class="product-name">Dried Cranberries</p>
-                                <p class="product-price">$9.69/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">B202</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/dried%20banana.jpg)"></div>
-                                <p class="product-name">Dried Whole Banana</p>
-                                <p class="product-price">$7.99/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">B205</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/papaya.jpg)"></div>
-                                <p class="product-name">papaya sweet</p>
-                                <p class="product-price">$6.99/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">B206</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/dried-papaya.jpeg)"></div>
-                                <p class="product-name">dried papaya</p>
-                                <p class="product-price">$10.89/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">B207</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/organic-dried-black-currants_3.jpg)"></div>
-                                <p class="product-name">Dried Black Currants</p>
-                                <p class="product-price">$3.48/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">B208</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/BananaChips.jpg)"></div>
-                                <p class="product-name">Banana chips</p>
-                                <p class="product-price">$3.99/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b209</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/flameraisins.jpg)"></div>
-                                <p class="product-name">Jumbo Flame Raisins</p>
-                                <p class="product-price">$4.19/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b211</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/dates.jpg)"></div>
-                                <p class="product-name">Medjool Dates</p>
-                                <p class="product-price">$8.99/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b212</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/apple%20rings.png)"></div>
-                                <p class="product-name">Dried Apple Rings</p>
-                                <p class="product-price">$9.99/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b213</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/organic-apricots.jpg)"></div>
-                                <p class="product-name">Turkish Apricots</p>
-                                <p class="product-price">$6.99/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b214</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/raisins-gold.jpg)"></div>
-                                <p class="product-name">Golden Raisins</p>
-                                <p class="product-price">$4.19/lbs</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b215</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/dried%20cherries.png)"></div>
-                                <p class="product-name">Dried Cherries</p>
-                                <p class="product-price">$19.99/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b217</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/Mission-Figs.jpg)"></div>
-                                <p class="product-name">Black Mission Figs</p>
-                                <p class="product-price">$6.99/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b218</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/turkish.jpg)"></div>
-                                <p class="product-name">Turkish Figs</p>
-                                <p class="product-price">$6.99/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b219</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/mango.jpeg)"></div>
-                                <p class="product-name">Dried Mango</p>
-                                <p class="product-price">$16.99/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b221</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/Natural%20Dried%20Pineapple%20Rings.jpeg)"></div>
-                                <p class="product-name">Dried Pineapple</p>
-                                <p class="product-price">$12.39/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b222</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/sweet-pineapple.jpg)"></div>
-                                <p class="product-name">Sweet Pineapple</p>
-                                <p class="product-price">$5.99/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b224</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/prune-whole.jpg)"></div>
-                                <p class="product-name">Pitted Prunes</p>
-                                <p class="product-price">$6.59/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b230</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/thompraisins.jpg)"></div>
-                                <p class="product-name">Thompson Raisins</p>
-                                <p class="product-price">$4.19/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b909</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/crystal%20ginger.jpg)"></div>
-                                <p class="product-name">Crystallized Ginger</p>
-                                <p class="product-price">$7.19/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b3010</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/dry%20gooseberries.jpg)"></div>
-                                <p class="product-name">Dried Gooseberries</p>
-                                <p class="product-price">$19.99/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b3011</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/dried%20strawberries.jpg)"></div>
-                                <p class="product-name">Dried Strawberries</p>
-                                <p class="product-price">$16.99/lb</p>
-                            </div>
-                        </li>
-                        
-                    </ul>
-                </li>
-                <li class="category-li">
-                    <h1 class="category-heading">Seeds &amp; Beans</h1>
-                    <ul class="inner-ul">
-                        <li>
-                            <h3 class="product-code">b258</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/salted-sunflower.jpg)"></div>
-                                <p class="product-name">Roasted Salted Sunflower Seeds</p>
-                                <p class="product-price">$3.69/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b259</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/sesame-seed.jpg)"></div>
-                                <p class="product-name">Raw Hulled Sesame Seeds</p>
-                                <p class="product-price">$3.69/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b270</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/tamari.jpg)"></div>
-                                <p class="product-name">Tamari Pumpkin Seeds</p>
-                                <p class="product-price">$11.99/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b271</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/roasted-sunflower-seeds.jpg)"></div>
-                                <p class="product-name">Roasted Unsalted Sunflower Seeds</p>
-                                <p class="product-price">$2.79/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b279</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/raw-sunflower.jpg)"></div>
-                                <p class="product-name">Raw Hulled Sunflower Seeds</p>
-                                <p class="product-price">$4.39/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b284</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/raw-pumpkin.jpg)"></div>
-                                <p class="product-name">Raw Pumpkin Seeds</p>
-                                <p class="product-price">$7.69/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b361</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/gold-flax.jpg)"></div>
-                                <p class="product-name">Golden Flax Seeds</p>
-                                <p class="product-price">$2.59/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b362</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/raw-flaxseed.jpg)"></div>
-                                <p class="product-name">Flax Seeds</p>
-                                <p class="product-price">$2.59/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b929</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/chia-seeds.jpg)"></div>
-                                <p class="product-name">Black Chia Seeds</p>
-                                <p class="product-price">$13.79/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b341</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/pintos.png)"></div>
-                                <p class="product-name">Pinto Beans</p>
-                                <p class="product-price">$2.19/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b342</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/lima-beans.jpg)"></div>
-                                <p class="product-name">Baby Lima Beans</p>
-                                <p class="product-price">$2.49/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b343</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/red-kidney.png)"></div>
-                                <p class="product-name">Red Kidney Beans</p>
-                                <p class="product-price">$3.59/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b344</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/mung-beans.jpg)"></div>
-                                <p class="product-name">Mung Beans</p>
-                                <p class="product-price">$2.89/lbs</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b345</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/navy-beans.jpg)"></div>
-                                <p class="product-name">Navy Beans</p>
-                                <p class="product-price">$2.29/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b346</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/turtle%20beans.jpg)"></div>
-                                <p class="product-name">Black / Turtle Beans</p>
-                                <p class="product-price">$2.19/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b348</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/adzuki.jpg)"></div>
-                                <p class="product-name">Adzuki Beans</p>
-                                <p class="product-price">$3.79/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b370</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/french.jpg)"></div>
-                                <p class="product-name">French Indigo Lentils</p>
-                                <p class="product-price">$2.89/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b371</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/green-split-peas.jpg)"></div>
-                                <p class="product-name">Green Split Peas</p>
-                                <p class="product-price">$2.09/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b372</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/red-lentils.jpg)"></div>
-                                <p class="product-name">Red Lentils</p>
-                                <p class="product-price">$2.89/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b373</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/black-eyed-peas.jpg)"></div>
-                                <p class="product-name">Black Eyed Peas</p>
-                                <p class="product-price">$2.09/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b374</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/green-lentils.jpeg)"></div>
-                                <p class="product-name">Green Lentils</p>
-                                <p class="product-price">$2.89/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b375</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/yellow-split-peas.jpg)"></div>
-                                <p class="product-name">Yellow Split Peas</p>
-                                <p class="product-price">$2.09/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b376</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/chickpeas.jpg)"></div>
-                                <p class="product-name">Chick Peas</p>
-                                <p class="product-price">$2.89/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b377</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/brown-lentils.jpg)"></div>
-                                <p class="product-name">Brown Lentils</p>
-                                <p class="product-price">$2.89/lb</p>
-                            </div>
-                        </li>
-                        
-                    </ul>
-                </li>
-                <li class="category-li">
-                    <h1 class="category-heading">Rice</h1>
-                    <ul class="inner-ul">
-                        <li>
-                            <h3 class="product-code">b320</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/sweet%20brown%20rice.jpg)"></div>
-                                <p class="product-name">Organic Sweet Brown Rice</p>
-                                <p class="product-price">$4.19/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b321</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/jasmine-brown.jpg)"></div>
-                                <p class="product-name">Organic Brown Jasmine Rice</p>
-                                <p class="product-price">$4.19/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b322</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/sushi-rice.jpg)"></div>
-                                <p class="product-name">Organic White Sushi Rice</p>
-                                <p class="product-price">$4.19/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b323</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/white-jasmine-rice.jpg)"></div>
-                                <p class="product-name">Organic White Jasmine Rice</p>
-                                <p class="product-price">$4.19/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b327</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/short-grain-brown.jpg)"></div>
-                                <p class="product-name">Organic Short Grain Brown Rice</p>
-                                <p class="product-price">$4.19/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b328</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/long-grain-brown.jpg)"></div>
-                                <p class="product-name">Organic Long Grain Brown Rice</p>
-                                <p class="product-price">$4.19/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b330</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/organic-brown-basmati-rice.jpg)"></div>
-                                <p class="product-name">Organic Basmati Brown Rice</p>
-                                <p class="product-price">$4.19/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b331</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/basmati-white.jpg)"></div>
-                                <p class="product-name">Organic Basmati White Rice</p>
-                                <p class="product-price">$4.19/lb</p>
-                            </div>
-                        </li>
-                        
-                        
-                    </ul>
-                </li>
-                <li class="category-li">
-                    <h1 class="category-heading">Snacks &amp; Treats</h1>
-                    <ul class="inner-ul">
-                        
-                        <li>
-                            <h3 class="product-code">b2</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/milk%20chocolate%20cherries.jpg)"></div>
-                                <p class="product-name">Milk chocolate cherries</p>
-                                <p class="product-price">$12.39/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b3</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/maple%20coconut%20chips.jpg)"></div>
-                                <p class="product-name">Maple coconut chips</p>
-                                <p class="product-price">$6.39/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b400</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/yogurt%20pretzels.jpeg)"></div>
-                                <p class="product-name">Yogurt Pretzels</p>
-                                <p class="product-price">$6.99/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b402</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/yogurt%20raisins.jpg)"></div>
-                                <p class="product-name">Yogurt raisins</p>
-                                <p class="product-price">$6.99/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b406</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/carob-raisins.jpg)"></div>
-                                <p class="product-name">Carob Raisins</p>
-                                <p class="product-price">$9.99/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b424</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/coconut-date-rolls.jpg)"></div>
-                                <p class="product-name">Coconut Medjool date rolls </p>
-                                <p class="product-price">$7.99/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b426</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/sesame-oat-sticks.jpg)"></div>
-                                <p class="product-name">Sesame oat bran sticks</p>
-                                <p class="product-price">$5.49/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b900</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/peanut%20crunch.jpg)"></div>
-                                <p class="product-name">Peanut crunch</p>
-                                <p class="product-price">$5.69/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b901</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/sesame%20brittle.jpg)"></div>
-                                <p class="product-name">Sesame honey brittle</p>
-                                <p class="product-price">$5.69/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b902</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/honey%20nut%20seed%20crunch.jpg)"></div>
-                                <p class="product-name">Honey &amp; nut seed crunch</p>
-                                <p class="product-price">$5.99/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b907</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/sunnybears.jpg)"></div>
-                                <p class="product-name">Sunny bears</p>
-                                <p class="product-price">$13.89/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b914</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/jelly%20beans.jpg)"></div>
-                                <p class="product-name">Jelly beans</p>
-                                <p class="product-price">$13.89/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b918</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/Yogurt%20Almonds.jpg)"></div>
-                                <p class="product-name">Yogurt almonds</p>
-                                <p class="product-price">$7.39/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b919</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/carob%20almonds.jpeg)"></div>
-                                <p class="product-name">Carob almonds</p>
-                                <p class="product-price">$11.29/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b921</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/malt%20balls.jpg)"></div>
-                                <p class="product-name">Malt balls</p>
-                                <p class="product-price">$10.89/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b923</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/sesame%20party%20mix.jpg)"></div>
-                                <p class="product-name">Sesame party mix</p>
-                                <p class="product-price">$4.19/lb</p>
-                            </div>
-                        </li>
-                        
-                    </ul>
-                </li>
-                <li class="category-li">
-                    <h1 class="category-heading">Granola</h1>
-                    <ul class="inner-ul">
-                        
-                        <li>
-                            <h3 class="product-code">b600</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/cherry%20vanilla.jpeg)"></div>
-                                <p class="product-name">Cherry vanilla granola </p>
-                                <p class="product-price">$4.79/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b602</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/strawberry%20raspberry.jpeg)"></div>
-                                <p class="product-name">Strawberry raspberry granola </p>
-                                <p class="product-price">$4.79/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b604</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/lite%20muesli.jpg)"></div>
-                                <p class="product-name">Lite Muesli </p>
-                                <p class="product-price">$4.79/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b605</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/no-img.png)"></div>
-                                <p class="product-name">Ginger snap</p>
-                                <p class="product-price">$4.79/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b608</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/apple%20cinnamon.jpg)"></div>
-                                <p class="product-name">Apple cinnamon granola</p>
-                                <p class="product-price">$4.79/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b610</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/coconut%20almond.jpeg)"></div>
-                                <p class="product-name">Coconut almond granola</p>
-                                <p class="product-price">$4.79/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b611</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/french%20vanilla.jpg)"></div>
-                                <p class="product-name">French vanilla almond granola</p>
-                                <p class="product-price">$4.79/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b613</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/maple%20pecan.jpg)"></div>
-                                <p class="product-name">Maple pecan granola</p>
-                                <p class="product-price">$4.79/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b615</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/super%20nutty.jpg)"></div>
-                                <p class="product-name"> Super nutty granola</p>
-                                <p class="product-price">$4.79/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b616</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/pistachio%20mulberry.jpg)"></div>
-                                <p class="product-name">Pistachio mulberry granola</p>
-                                <p class="product-price">$6.39/lb</p>
-                            </div>
-                        </li>
-                        
-                    </ul>
-                </li>
-                <li class="category-li">
-                    <h1 class="category-heading">Flours &amp; Powders</h1>
-                    <ul class="inner-ul">
-                        
-                        <li>
-                            <h3 class="product-code">b349</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/oat%20flour.png)"></div>
-                                <p class="product-name">Oat flour</p>
-                                <p class="product-price">$2.09/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b355</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/whole%20wheat%20pastry%20flour.jpg)"></div>
-                                <p class="product-name">whole wheat pastry flour</p>
-                                <p class="product-price">$2.09/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b360</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/wheat%20germ.jpg)"></div>
-                                <p class="product-name">wheat germ </p>
-                                <p class="product-price">$2.89/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b382</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/corn%20grits.jpg)"></div>
-                                <p class="product-name">yellow corn grits</p>
-                                <p class="product-price">$1.89/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b385</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/unbleached%20flour.jpg)"></div>
-                                <p class="product-name">unbleached white flour</p>
-                                <p class="product-price">$2.09/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b404</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/textured%20protein.jpg)"></div>
-                                <p class="product-name">textured vegetable protein</p>
-                                <p class="product-price">$4.49/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b412</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/nutritional%20yeast.jpg)"></div>
-                                <p class="product-name">nutritional yeast</p>
-                                <p class="product-price">$10.69/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b423</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/turbinado%20sugar.jpg)"></div>
-                                <p class="product-name">turbinado sugar</p>
-                                <p class="product-price">$2.69/lb</p>
-                            </div>
-                        </li>
-                        
-                    </ul>
-                </li>
-                <li class="category-li">
-
-                    <h1 class="category-heading">Grains</h1>
-                    <ul class="inner-ul">
-                        <li>
-                            <h3 class="product-code">b6</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/6.jpg)"></div>
-                                <p class="product-name">farro</p>
-                                <p class="product-price">$1.89/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b300</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/pearled%20barley.jpg)"></div>
-                                <p class="product-name">pearled barley</p>
-                                <p class="product-price">$1.89/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b302</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/bulgar%20wheat.jpg)"></div>
-                                <p class="product-name">bulgur wheat</p>
-                                <p class="product-price">$2.59/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b308</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/couscous.jpg)"></div>
-                                <p class="product-name">french couscous</p>
-                                <p class="product-price">$3.29/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b310</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/millet.jpg)"></div>
-                                <p class="product-name">millet</p>
-                                <p class="product-price">$1.99/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b312</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/regularrolledoats.jpg)"></div>
-                                <p class="product-name">regular rolled oats</p>
-                                <p class="product-price">$1.89/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">B313</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/steel%20cut%20oats.jpg)"></div>
-                                <p class="product-name">steel cut oat groats </p>
-                                <p class="product-price">$1.99/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b314</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/oat%20bran.jpg)"></div>
-                                <p class="product-name">oat bran</p>
-                                <p class="product-price">$2.49/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b315</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/quick%20rolled%20oats.jpg)"></div>
-                                <p class="product-name">quick rolled oats</p>
-                                <p class="product-price">$1.89/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b316</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/wheat%20bran.jpg)"></div>
-                                <p class="product-name">wheat bran</p>
-                                <p class="product-price">$1.79/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b317</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/thick%20rolled%20oats.jpg)"></div>
-                                <p class="product-name">thick rolled oats</p>
-                                <p class="product-price">$1.89/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b318</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/popcorn.jpg)"></div>
-                                <p class="product-name">popcorn</p>
-                                <p class="product-price">$1.89/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b319</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/wheat%20oat%20groats.jpg)"></div>
-                                <p class="product-name">wheat oat groats</p>
-                                <p class="product-price">$1.79/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b332</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/wheat%20berries.jpg)"></div>
-                                <p class="product-name">wheat berries</p>
-                                <p class="product-price">$1.79/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b336</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/quinoa.jpg)"></div>
-                                <p class="product-name">quinoa</p>
-                                <p class="product-price">$7.99/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b3367</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/red%20quinoa.jpeg)"></div>
-                                <p class="product-name">red quinoa</p>
-                                <p class="product-price">$7.99/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b363</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/%20buckwheat.jpg)"></div>
-                                <p class="product-name">roasted buckwheat kasha</p>
-                                <p class="product-price">$3.49/lb</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <h3 class="product-code">b364</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/raw%20buckwheat.jpg)"></div>
-                                <p class="product-name">raw buckwheat groats</p>
-                                <p class="product-price">$2.69/lb</p>
-                            </div>
-                        </li>
-                        
-                    </ul>
-                </li>
-                <!--PRODUCE-->
-                <li class="category-li">
-
-                    <h1 class="category-heading">Vegetables</h1>
-                    <ul class="inner-ul">
-                        <li>
-                            <h3 class="product-code">p22</h3>
-                            <div class="li-padding">
-                                <div class="product-img" style="background-image: url(images/pearled%20barley.jpg)"></div>
-                                <p class="product-name">pearled barley</p>
-                                <p class="product-price"></p>
-                            </div>
-                        </li>
-                        
-                    </ul>
-                </li>
-            </ul>
-            <div class="scroll-top" title="Scroll to Top">
-                <img src="images/rocket.png" width="60%;">
-            </div>
-        </div>
-        
-        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>   
-        <script src="script/jquery.js"></script>
-        <script src="script/date.js"></script>
-        <script>
-            $('.fa-times-circle').click(function(){
-                $('.notification').css("display","none")
-            })
-        </script>
-    </body>
+      <div class="notification" id="notification">
+         <p><span id="sale-type"></span>Get 20% Off <i class="far fa-times-circle"></i></p>
+      </div>
+      <header>
+         <div class="logo" onClick="window.location.reload(); window.location = '/'"></div>
+         <nav>
+            <a href="index.html" class="active">All Items</a>
+            <a href="bulk.html">Bulk</a>
+            <a href="produce.html">Produce</a>
+         </nav>
+      </header>
+      <div class="max-width">
+         <div class="search-wrap">
+            <input id="search-box" type="text" placeholder="Search by product name, code or price" autofocus>
+            <img class="search-icon" src="images/search.png" width="100%;">
+         </div>
+         <ul id="product-list">
+            <!--BULK-->
+             
+            <!--Nuts-->
+            <li class="category-li">
+               <h1 class="category-heading">Nuts</h1>
+               <ul class="inner-ul">
+                  <li>
+                     <h3 class="product-code">b232</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/232.jpg)"></div>
+                        <p class="product-name">shredded cocount</p>
+                        <p class="product-price"></p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b239</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/239.jpeg)"></div>
+                        <p class="product-name">raw hazelnuts</p>
+                        <p class="product-price"></p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b241</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/241.jpg)"></div>
+                        <p class="product-name">raw almonds</p>
+                        <p class="product-price"></p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b242</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/242.jpg)"></div>
+                        <p class="product-name">roasted almonds "unsalted"</p>
+                        <p class="product-price"></p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b243</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/243.jpg)"></div>
+                        <p class="product-name">tamari almonds</p>
+                        <p class="product-price"></p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b244</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/244.jpg)"></div>
+                        <p class="product-name">roasted almonds "salted"</p>
+                        <p class="product-price"></p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b245</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/245.jpg)"></div>
+                        <p class="product-name">raw almonds "sliced"</p>
+                        <p class="product-price"></p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b246</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/246.jpg)"></div>
+                        <p class="product-name">raw cashews "whole"</p>
+                        <p class="product-price"></p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b247</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/247.jpg)"></div>
+                        <p class="product-name">cashew pieces</p>
+                        <p class="product-price"></p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b248</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/248.jpg)"></div>
+                        <p class="product-name">roasted cashew "salted"</p>
+                        <p class="product-price"></p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b249</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/249.jpg)"></div>
+                        <p class="product-name">roasted cashew "unsalted"</p>
+                        <p class="product-price"></p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b250</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/250.jpg)"></div>
+                        <p class="product-name">brazil nuts</p>
+                        <p class="product-price"></p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b253</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/253.jpg)"></div>
+                        <p class="product-name">raw pecans</p>
+                        <p class="product-price"></p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b257</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/257.jpg)"></div>
+                        <p class="product-name">raw walnuts</p>
+                        <p class="product-price"></p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b272</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/272.jpg)"></div>
+                        <p class="product-name">raw macadamia</p>
+                        <p class="product-price"></p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b273</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/273.jpg)"></div>
+                        <p class="product-name">roasted peanuts "salted"</p>
+                        <p class="product-price"></p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b275</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/275.jpeg)"></div>
+                        <p class="product-name">raw pistachios "no shells"</p>
+                        <p class="product-price"></p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b276</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/276.jpg)"></div>
+                        <p class="product-name">roasted salted pistachios</p>
+                        <p class="product-price"></p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b280</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/280.jpg)"></div>
+                        <p class="product-name">roasted mixed nuts "unsalted"</p>
+                        <p class="product-price"></p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b281</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/281.png)"></div>
+                        <p class="product-name">roasted mixed nuts "salted"</p>
+                        <p class="product-price"></p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b282</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/282.jpg)"></div>
+                        <p class="product-name">roasted unsalted peanuts</p>
+                        <p class="product-price"></p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b283</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/283.jpg)"></div>
+                        <p class="product-name">Raw peanuts</p>
+                        <p class="product-price"></p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b669</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/669.jpg)"></div>
+                        <p class="product-name">Tierra raw mix</p>
+                        <p class="product-price"></p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b699</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/699.jpg)"></div>
+                        <p class="product-name">tierra trail mix</p>
+                        <p class="product-price"></p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b700</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/700.jpg)"></div>
+                        <p class="product-name">curry cashews</p>
+                        <p class="product-price"></p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b701</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/no-img.png); pointer-events: none"></div>
+                        <p class="product-name">maple ginger cashews</p>
+                        <p class="product-price"></p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b889</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/889.jpg)"></div>
+                        <p class="product-name">cajun cashews</p>
+                        <p class="product-price"></p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b897</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/897.jpg)"></div>
+                        <p class="product-name">maple glazed mixed nuts</p>
+                        <p class="product-price"></p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b990</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/990.jpg)"></div>
+                        <p class="product-name">carob peanut clusters</p>
+                        <p class="product-price"></p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b994</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/994.jpg)"></div>
+                        <p class="product-name">deluxe trail mix</p>
+                        <p class="product-price"></p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b995</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/995.jpg)"></div>
+                        <p class="product-name">maple cinnamon walnuts</p>
+                        <p class="product-price"></p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b998</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/998.jpg)"></div>
+                        <p class="product-name">goji berries</p>
+                        <p class="product-price"></p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b2388</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/2388.jpg)"></div>
+                        <p class="product-name">very berry mix</p>
+                        <p class="product-price"></p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b2422</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/2422.jpg)"></div>
+                        <p class="product-name">cocoa dusted choco almonds</p>
+                        <p class="product-price"></p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b2466</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/2466.jpg)"></div>
+                        <p class="product-name">sea salt &amp; onion cashews</p>
+                        <p class="product-price"></p>
+                     </div>
+                  </li>
+               </ul>
+            </li>
+            <!--Dried fruits-->
+            <li class="category-li">
+               <h1 class="category-heading">Dried Fruits</h1>
+               <ul class="inner-ul">
+                  <li>
+                     <h3 class="product-code">B1</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/wasabi.png)"></div>
+                        <p class="product-name">Wasabi Green Peas</p>
+                        <p class="product-price">$5.29/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">B4</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/chamomile.jpg)"></div>
+                        <p class="product-name">Chamomile Flares</p>
+                        <p class="product-price">$14.99/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">B201</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/dried%20cranberries.jpg)"></div>
+                        <p class="product-name">Dried Cranberries</p>
+                        <p class="product-price">$9.69/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">B202</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/dried%20banana.jpg)"></div>
+                        <p class="product-name">Dried Whole Banana</p>
+                        <p class="product-price">$7.99/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">B205</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/papaya.jpg)"></div>
+                        <p class="product-name">papaya sweet</p>
+                        <p class="product-price">$6.99/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">B206</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/dried-papaya.jpeg)"></div>
+                        <p class="product-name">dried papaya</p>
+                        <p class="product-price">$10.89/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">B207</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/organic-dried-black-currants_3.jpg)"></div>
+                        <p class="product-name">Dried Black Currants</p>
+                        <p class="product-price">$3.48/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">B208</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/BananaChips.jpg)"></div>
+                        <p class="product-name">Banana chips</p>
+                        <p class="product-price">$3.99/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b209</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/flameraisins.jpg)"></div>
+                        <p class="product-name">Jumbo Flame Raisins</p>
+                        <p class="product-price">$4.19/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b211</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/dates.jpg)"></div>
+                        <p class="product-name">Medjool Dates</p>
+                        <p class="product-price">$8.99/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b212</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/apple%20rings.png)"></div>
+                        <p class="product-name">Dried Apple Rings</p>
+                        <p class="product-price">$9.99/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b213</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/organic-apricots.jpg)"></div>
+                        <p class="product-name">Turkish Apricots</p>
+                        <p class="product-price">$6.99/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b214</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/raisins-gold.jpg)"></div>
+                        <p class="product-name">Golden Raisins</p>
+                        <p class="product-price">$4.19/lbs</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b215</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/dried%20cherries.png)"></div>
+                        <p class="product-name">Dried Cherries</p>
+                        <p class="product-price">$19.99/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b217</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/Mission-Figs.jpg)"></div>
+                        <p class="product-name">Black Mission Figs</p>
+                        <p class="product-price">$6.99/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b218</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/turkish.jpg)"></div>
+                        <p class="product-name">Turkish Figs</p>
+                        <p class="product-price">$6.99/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b219</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/mango.jpeg)"></div>
+                        <p class="product-name">Dried Mango</p>
+                        <p class="product-price">$16.99/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b221</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/Natural%20Dried%20Pineapple%20Rings.jpeg)"></div>
+                        <p class="product-name">Dried Pineapple</p>
+                        <p class="product-price">$12.39/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b222</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/sweet-pineapple.jpg)"></div>
+                        <p class="product-name">Sweet Pineapple</p>
+                        <p class="product-price">$5.99/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b224</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/prune-whole.jpg)"></div>
+                        <p class="product-name">Pitted Prunes</p>
+                        <p class="product-price">$6.59/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b230</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/thompraisins.jpg)"></div>
+                        <p class="product-name">Thompson Raisins</p>
+                        <p class="product-price">$4.19/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b909</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/crystal%20ginger.jpg)"></div>
+                        <p class="product-name">Crystallized Ginger</p>
+                        <p class="product-price">$7.19/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b3010</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/dry%20gooseberries.jpg)"></div>
+                        <p class="product-name">Dried Gooseberries</p>
+                        <p class="product-price">$19.99/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b3011</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/dried%20strawberries.jpg)"></div>
+                        <p class="product-name">Dried Strawberries</p>
+                        <p class="product-price">$16.99/lb</p>
+                     </div>
+                  </li>
+               </ul>
+            </li>
+            <!--Seeds & beans--> 
+            <li class="category-li">
+               <h1 class="category-heading">Seeds &amp; Beans</h1>
+               <ul class="inner-ul">
+                  <li>
+                     <h3 class="product-code">b258</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/salted-sunflower.jpg)"></div>
+                        <p class="product-name">Roasted Salted Sunflower Seeds</p>
+                        <p class="product-price">$3.69/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b259</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/sesame-seed.jpg)"></div>
+                        <p class="product-name">Raw Hulled Sesame Seeds</p>
+                        <p class="product-price">$3.69/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b270</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/tamari.jpg)"></div>
+                        <p class="product-name">Tamari Pumpkin Seeds</p>
+                        <p class="product-price">$11.99/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b271</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/roasted-sunflower-seeds.jpg)"></div>
+                        <p class="product-name">Roasted Unsalted Sunflower Seeds</p>
+                        <p class="product-price">$2.79/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b279</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/raw-sunflower.jpg)"></div>
+                        <p class="product-name">Raw Hulled Sunflower Seeds</p>
+                        <p class="product-price">$4.39/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b284</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/raw-pumpkin.jpg)"></div>
+                        <p class="product-name">Raw Pumpkin Seeds</p>
+                        <p class="product-price">$7.69/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b361</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/gold-flax.jpg)"></div>
+                        <p class="product-name">Golden Flax Seeds</p>
+                        <p class="product-price">$2.59/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b362</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/raw-flaxseed.jpg)"></div>
+                        <p class="product-name">Flax Seeds</p>
+                        <p class="product-price">$2.59/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b929</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/chia-seeds.jpg)"></div>
+                        <p class="product-name">Black Chia Seeds</p>
+                        <p class="product-price">$13.79/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b341</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/pintos.png)"></div>
+                        <p class="product-name">Pinto Beans</p>
+                        <p class="product-price">$2.19/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b342</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/lima-beans.jpg)"></div>
+                        <p class="product-name">Baby Lima Beans</p>
+                        <p class="product-price">$2.49/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b343</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/red-kidney.png)"></div>
+                        <p class="product-name">Red Kidney Beans</p>
+                        <p class="product-price">$3.59/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b344</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/mung-beans.jpg)"></div>
+                        <p class="product-name">Mung Beans</p>
+                        <p class="product-price">$2.89/lbs</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b345</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/navy-beans.jpg)"></div>
+                        <p class="product-name">Navy Beans</p>
+                        <p class="product-price">$2.29/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b346</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/turtle%20beans.jpg)"></div>
+                        <p class="product-name">Black / Turtle Beans</p>
+                        <p class="product-price">$2.19/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b348</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/adzuki.jpg)"></div>
+                        <p class="product-name">Adzuki Beans</p>
+                        <p class="product-price">$3.79/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b370</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/french.jpg)"></div>
+                        <p class="product-name">French Indigo Lentils</p>
+                        <p class="product-price">$2.89/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b371</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/green-split-peas.jpg)"></div>
+                        <p class="product-name">Green Split Peas</p>
+                        <p class="product-price">$2.09/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b372</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/red-lentils.jpg)"></div>
+                        <p class="product-name">Red Lentils</p>
+                        <p class="product-price">$2.89/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b373</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/black-eyed-peas.jpg)"></div>
+                        <p class="product-name">Black Eyed Peas</p>
+                        <p class="product-price">$2.09/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b374</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/green-lentils.jpeg)"></div>
+                        <p class="product-name">Green Lentils</p>
+                        <p class="product-price">$2.89/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b375</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/yellow-split-peas.jpg)"></div>
+                        <p class="product-name">Yellow Split Peas</p>
+                        <p class="product-price">$2.09/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b376</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/chickpeas.jpg)"></div>
+                        <p class="product-name">Chick Peas</p>
+                        <p class="product-price">$2.89/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b377</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/brown-lentils.jpg)"></div>
+                        <p class="product-name">Brown Lentils</p>
+                        <p class="product-price">$2.89/lb</p>
+                     </div>
+                  </li>
+               </ul>
+            </li>
+            <!--Rice-->
+            <li class="category-li">
+               <h1 class="category-heading">Rice</h1>
+               <ul class="inner-ul">
+                  <li>
+                     <h3 class="product-code">b320</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/sweet%20brown%20rice.jpg)"></div>
+                        <p class="product-name">Organic Sweet Brown Rice</p>
+                        <p class="product-price">$4.19/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b321</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/jasmine-brown.jpg)"></div>
+                        <p class="product-name">Organic Brown Jasmine Rice</p>
+                        <p class="product-price">$4.19/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b322</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/sushi-rice.jpg)"></div>
+                        <p class="product-name">Organic White Sushi Rice</p>
+                        <p class="product-price">$4.19/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b323</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/white-jasmine-rice.jpg)"></div>
+                        <p class="product-name">Organic White Jasmine Rice</p>
+                        <p class="product-price">$4.19/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b327</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/short-grain-brown.jpg)"></div>
+                        <p class="product-name">Organic Short Grain Brown Rice</p>
+                        <p class="product-price">$4.19/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b328</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/long-grain-brown.jpg)"></div>
+                        <p class="product-name">Organic Long Grain Brown Rice</p>
+                        <p class="product-price">$4.19/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b330</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/organic-brown-basmati-rice.jpg)"></div>
+                        <p class="product-name">Organic Basmati Brown Rice</p>
+                        <p class="product-price">$4.19/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b331</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/basmati-white.jpg)"></div>
+                        <p class="product-name">Organic Basmati White Rice</p>
+                        <p class="product-price">$4.19/lb</p>
+                     </div>
+                  </li>
+               </ul>
+            </li>
+            <!--Snacks & treats-->
+            <li class="category-li">
+               <h1 class="category-heading">Snacks &amp; Treats</h1>
+               <ul class="inner-ul">
+                  <li>
+                     <h3 class="product-code">b2</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/milk%20chocolate%20cherries.jpg)"></div>
+                        <p class="product-name">Milk chocolate cherries</p>
+                        <p class="product-price">$12.39/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b3</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/maple%20coconut%20chips.jpg)"></div>
+                        <p class="product-name">Maple coconut chips</p>
+                        <p class="product-price">$6.39/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b400</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/yogurt%20pretzels.jpeg)"></div>
+                        <p class="product-name">Yogurt Pretzels</p>
+                        <p class="product-price">$6.99/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b402</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/yogurt%20raisins.jpg)"></div>
+                        <p class="product-name">Yogurt raisins</p>
+                        <p class="product-price">$6.99/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b406</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/carob-raisins.jpg)"></div>
+                        <p class="product-name">Carob Raisins</p>
+                        <p class="product-price">$9.99/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b424</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/coconut-date-rolls.jpg)"></div>
+                        <p class="product-name">Coconut Medjool date rolls </p>
+                        <p class="product-price">$7.99/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b426</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/sesame-oat-sticks.jpg)"></div>
+                        <p class="product-name">Sesame oat bran sticks</p>
+                        <p class="product-price">$5.49/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b900</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/peanut%20crunch.jpg)"></div>
+                        <p class="product-name">Peanut crunch</p>
+                        <p class="product-price">$5.69/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b901</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/sesame%20brittle.jpg)"></div>
+                        <p class="product-name">Sesame honey brittle</p>
+                        <p class="product-price">$5.69/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b902</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/honey%20nut%20seed%20crunch.jpg)"></div>
+                        <p class="product-name">Honey &amp; nut seed crunch</p>
+                        <p class="product-price">$5.99/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b907</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/sunnybears.jpg)"></div>
+                        <p class="product-name">Sunny bears</p>
+                        <p class="product-price">$13.89/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b914</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/jelly%20beans.jpg)"></div>
+                        <p class="product-name">Jelly beans</p>
+                        <p class="product-price">$13.89/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b918</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/Yogurt%20Almonds.jpg)"></div>
+                        <p class="product-name">Yogurt almonds</p>
+                        <p class="product-price">$7.39/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b919</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/carob%20almonds.jpeg)"></div>
+                        <p class="product-name">Carob almonds</p>
+                        <p class="product-price">$11.29/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b921</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/malt%20balls.jpg)"></div>
+                        <p class="product-name">Malt balls</p>
+                        <p class="product-price">$10.89/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b923</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/sesame%20party%20mix.jpg)"></div>
+                        <p class="product-name">Sesame party mix</p>
+                        <p class="product-price">$4.19/lb</p>
+                     </div>
+                  </li>
+               </ul>
+            </li>
+            <!--Granola-->
+            <li class="category-li">
+               <h1 class="category-heading">Granola</h1>
+               <ul class="inner-ul">
+                  <li>
+                     <h3 class="product-code">b600</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/cherry%20vanilla.jpeg)"></div>
+                        <p class="product-name">Cherry vanilla granola </p>
+                        <p class="product-price">$4.79/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b602</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/strawberry%20raspberry.jpeg)"></div>
+                        <p class="product-name">Strawberry raspberry granola </p>
+                        <p class="product-price">$4.79/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b604</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/lite%20muesli.jpg)"></div>
+                        <p class="product-name">Lite Muesli </p>
+                        <p class="product-price">$4.79/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b605</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/no-img.png)"></div>
+                        <p class="product-name">Ginger snap</p>
+                        <p class="product-price">$4.79/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b608</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/apple%20cinnamon.jpg)"></div>
+                        <p class="product-name">Apple cinnamon granola</p>
+                        <p class="product-price">$4.79/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b610</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/coconut%20almond.jpeg)"></div>
+                        <p class="product-name">Coconut almond granola</p>
+                        <p class="product-price">$4.79/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b611</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/french%20vanilla.jpg)"></div>
+                        <p class="product-name">French vanilla almond granola</p>
+                        <p class="product-price">$4.79/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b613</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/maple%20pecan.jpg)"></div>
+                        <p class="product-name">Maple pecan granola</p>
+                        <p class="product-price">$4.79/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b615</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/super%20nutty.jpg)"></div>
+                        <p class="product-name"> Super nutty granola</p>
+                        <p class="product-price">$4.79/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b616</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/pistachio%20mulberry.jpg)"></div>
+                        <p class="product-name">Pistachio mulberry granola</p>
+                        <p class="product-price">$6.39/lb</p>
+                     </div>
+                  </li>
+               </ul>
+            </li>
+            <!--Flours & powders-->
+            <li class="category-li">
+               <h1 class="category-heading">Flours &amp; Powders</h1>
+               <ul class="inner-ul">
+                  <li>
+                     <h3 class="product-code">b349</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/oat%20flour.png)"></div>
+                        <p class="product-name">Oat flour</p>
+                        <p class="product-price">$2.09/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b355</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/whole%20wheat%20pastry%20flour.jpg)"></div>
+                        <p class="product-name">whole wheat pastry flour</p>
+                        <p class="product-price">$2.09/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b360</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/wheat%20germ.jpg)"></div>
+                        <p class="product-name">wheat germ </p>
+                        <p class="product-price">$2.89/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b382</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/corn%20grits.jpg)"></div>
+                        <p class="product-name">yellow corn grits</p>
+                        <p class="product-price">$1.89/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b385</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/unbleached%20flour.jpg)"></div>
+                        <p class="product-name">unbleached white flour</p>
+                        <p class="product-price">$2.09/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b404</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/textured%20protein.jpg)"></div>
+                        <p class="product-name">textured vegetable protein</p>
+                        <p class="product-price">$4.49/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b412</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/nutritional%20yeast.jpg)"></div>
+                        <p class="product-name">nutritional yeast</p>
+                        <p class="product-price">$10.69/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b423</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/turbinado%20sugar.jpg)"></div>
+                        <p class="product-name">turbinado sugar</p>
+                        <p class="product-price">$2.69/lb</p>
+                     </div>
+                  </li>
+               </ul>
+            </li>
+             <!--Grains-->
+            <li class="category-li">
+               <h1 class="category-heading">Grains</h1>
+               <ul class="inner-ul">
+                  <li>
+                     <h3 class="product-code">b6</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/6.jpg)"></div>
+                        <p class="product-name">farro</p>
+                        <p class="product-price">$1.89/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b300</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/pearled%20barley.jpg)"></div>
+                        <p class="product-name">pearled barley</p>
+                        <p class="product-price">$1.89/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b302</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/bulgar%20wheat.jpg)"></div>
+                        <p class="product-name">bulgur wheat</p>
+                        <p class="product-price">$2.59/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b308</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/couscous.jpg)"></div>
+                        <p class="product-name">french couscous</p>
+                        <p class="product-price">$3.29/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b310</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/millet.jpg)"></div>
+                        <p class="product-name">millet</p>
+                        <p class="product-price">$1.99/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b312</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/regularrolledoats.jpg)"></div>
+                        <p class="product-name">regular rolled oats</p>
+                        <p class="product-price">$1.89/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">B313</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/steel%20cut%20oats.jpg)"></div>
+                        <p class="product-name">steel cut oat groats </p>
+                        <p class="product-price">$1.99/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b314</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/oat%20bran.jpg)"></div>
+                        <p class="product-name">oat bran</p>
+                        <p class="product-price">$2.49/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b315</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/quick%20rolled%20oats.jpg)"></div>
+                        <p class="product-name">quick rolled oats</p>
+                        <p class="product-price">$1.89/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b316</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/wheat%20bran.jpg)"></div>
+                        <p class="product-name">wheat bran</p>
+                        <p class="product-price">$1.79/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b317</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/thick%20rolled%20oats.jpg)"></div>
+                        <p class="product-name">thick rolled oats</p>
+                        <p class="product-price">$1.89/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b318</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/popcorn.jpg)"></div>
+                        <p class="product-name">popcorn</p>
+                        <p class="product-price">$1.89/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b319</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/wheat%20oat%20groats.jpg)"></div>
+                        <p class="product-name">wheat oat groats</p>
+                        <p class="product-price">$1.79/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b332</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/wheat%20berries.jpg)"></div>
+                        <p class="product-name">wheat berries</p>
+                        <p class="product-price">$1.79/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b336</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/quinoa.jpg)"></div>
+                        <p class="product-name">quinoa</p>
+                        <p class="product-price">$7.99/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b3367</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/red%20quinoa.jpeg)"></div>
+                        <p class="product-name">red quinoa</p>
+                        <p class="product-price">$7.99/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b363</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/%20buckwheat.jpg)"></div>
+                        <p class="product-name">roasted buckwheat kasha</p>
+                        <p class="product-price">$3.49/lb</p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">b364</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/raw%20buckwheat.jpg)"></div>
+                        <p class="product-name">raw buckwheat groats</p>
+                        <p class="product-price">$2.69/lb</p>
+                     </div>
+                  </li>
+               </ul>
+            </li>
+             
+            <!--PRODUCE-->
+            <!--Vegetables-->
+            <li class="category-li">
+               <h1 class="category-heading">Vegetables</h1>
+               <ul class="inner-ul">
+                  <li>
+                     <h3 class="product-code">p22</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/22.jpg)"></div>
+                        <p class="product-name">lemon</p>
+                        <p class="product-price"></p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">p24</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/24.jpg)"></div>
+                        <p class="product-name">lime</p>
+                        <p class="product-price"></p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">p29</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/29.jpg)"></div>
+                        <p class="product-name">shallot</p>
+                        <p class="product-price"></p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">p74</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/74.jpg)"></div>
+                        <p class="product-name">arugula</p>
+                        <p class="product-price"></p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">p75</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/75.png)"></div>
+                        <p class="product-name">artichoke</p>
+                        <p class="product-price"></p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">p76</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/76.jpg)"></div>
+                        <p class="product-name">asparagus</p>
+                        <p class="product-price"></p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">p78</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/78.jpg)"></div>
+                        <p class="product-name">basil</p>
+                        <p class="product-price"></p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">p79</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/79.jpg)"></div>
+                        <p class="product-name">fava beans</p>
+                        <p class="product-price"></p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">p80</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/80.jpg)"></div>
+                        <p class="product-name">string beans</p>
+                        <p class="product-price"></p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">p81</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/81.jpg)"></div>
+                        <p class="product-name">beets "loose"</p>
+                        <p class="product-price"></p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">p82</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/82.jpg)"></div>
+                        <p class="product-name">bok choy</p>
+                        <p class="product-price"></p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">p84</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/84.jpg)"></div>
+                        <p class="product-name">brussel sprout</p>
+                        <p class="product-price"></p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">p86</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/86.jpg)"></div>
+                        <p class="product-name">burdock root</p>
+                        <p class="product-price"></p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">p88</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/88.jpg)"></div>
+                        <p class="product-name">cilantro</p>
+                        <p class="product-price"></p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">p89</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/no-img.png); pointer-events: none"></div>
+                        <p class="product-name">chicory</p>
+                        <p class="product-price"></p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">p90</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/90.jpeg)"></div>
+                        <p class="product-name">green cabbage</p>
+                        <p class="product-price"></p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">p91</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/91.jpeg)"></div>
+                        <p class="product-name">red cabbage</p>
+                        <p class="product-price"></p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">p92</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/92.jpg)"></div>
+                        <p class="product-name">nappa cabbage</p>
+                        <p class="product-price"></p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">p93</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/93.jpg)"></div>
+                        <p class="product-name">Green chard</p>
+                        <p class="product-price"></p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">p94</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/94.jpg)"></div>
+                        <p class="product-name">Carrots</p>
+                        <p class="product-price"></p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">p96</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/96.jpeg)"></div>
+                        <p class="product-name">Celery</p>
+                        <p class="product-price"></p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">p98</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/98.jpg)"></div>
+                        <p class="product-name">Collard green</p>
+                        <p class="product-price"></p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">p100</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/100.jpeg)"></div>
+                        <p class="product-name">Cucumber</p>
+                        <p class="product-price"></p>
+                     </div>
+                  </li>
+               </ul>
+            </li>
+         </ul>
+         <div class="scroll-top" title="Scroll to Top">
+            <img src="images/rocket.png" width="60%;">
+         </div>
+      </div>
+      <script src="https://code.jquery.com/jquery-3.3.1.js"></script>   
+      <script src="script/jquery.js"></script>
+      <script src="script/date.js"></script>
+      <script src="script/passcode.js"></script>
+      <script>
+         $('.fa-times-circle').click(function(){
+             $('.notification').css("display","none")
+         })
+      </script>
+   </body>
 </html>

@@ -1,48 +1,239 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="script/filter.js"></script>
-        <script src="https://kit.fontawesome.com/0bbf47f20a.js" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="style/main.css">
-        <link rel="shortcut icon" href="images/logo.jpg">
-        <script src="script/date.js"></script>
-        <style>
-            #search-box{
-                cursor: not-allowed;
-            }
-        </style>
-        <title>Gary Null's | Produce</title>
-    </head>
-    <body>
-        <div class="notification">
-            <p><span id="sale-type"></span>Get 20% Off <i class="far fa-times-circle"></i></p>
+   <head>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="script/filter.js"></script>
+      <script src="https://kit.fontawesome.com/0bbf47f20a.js" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="style/main.css">
+      <link rel="shortcut icon" href="images/logo.jpg">
+      <script src="script/date.js"></script>
+      <style>
+      </style>
+      <title>Gary Null's | Produce</title>
+   </head>
+   <body>
+       <div class="password-modal">
+            <form>
+                <input id="pass" type="password" placeholder="code" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" maxlength="4" autofocus>
+            </form>
         </div>
-        <header>
-                <div class="logo"></div>
-                <nav>
-                    <a href="index.html" >All Items</a>
-                    <a href="bulk.html">Bulk</a>
-                    <a href="produce.html"  class="active">Produce</a>
-                </nav>
-        </header>
-        <div class="max-width">
-            
-            <div class="page-content-notice">
-                <h1>Page under construction</h1>
-            </div>
-            
-            <div class="scroll-top" title="Scroll to Top">
-                <img src="images/rocket.png" width="60%;">
-            </div>
-        </div>
-        
-        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>   
-        <script src="script/jquery.js"></script>
-        <script>
-            $('.fa-times-circle').click(function(){
-                $('.notification').css("display","none")
-            })
-        </script>
-    </body>
+      <div class="notification">
+         <p><span id="sale-type"></span>Get 20% Off <i class="far fa-times-circle"></i></p>
+      </div>
+      <header>
+         <div class="logo" onClick="window.location.reload();window.location = '/'"></div>
+         <nav>
+            <a href="index.html">All Items</a>
+            <a href="bulk.html">Bulk</a>
+            <a href="produce.html"  class="active">Produce</a>
+         </nav>
+      </header>
+      <div class="max-width">
+         <div class="search-wrap">
+            <input id="search-box" type="text" placeholder="Search by product name, code or price" autofocus>
+         </div>
+         <ul id="product-list">
+            <li class="category-li">
+               <h1 class="category-heading">Vegetables</h1>
+               <ul class="inner-ul">
+                  <li>
+                     <h3 class="product-code">p22</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/22.jpg)"></div>
+                        <p class="product-name">lemon</p>
+                        <p class="product-price"></p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">p24</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/24.jpg)"></div>
+                        <p class="product-name">lime</p>
+                        <p class="product-price"></p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">p29</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/29.jpg)"></div>
+                        <p class="product-name">shallot</p>
+                        <p class="product-price"></p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">p74</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/74.jpg)"></div>
+                        <p class="product-name">arugula</p>
+                        <p class="product-price"></p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">p75</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/75.png)"></div>
+                        <p class="product-name">artichoke</p>
+                        <p class="product-price"></p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">p76</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/76.jpg)"></div>
+                        <p class="product-name">asparagus</p>
+                        <p class="product-price"></p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">p78</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/78.jpg)"></div>
+                        <p class="product-name">basil</p>
+                        <p class="product-price"></p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">p79</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/79.jpg)"></div>
+                        <p class="product-name">fava beans</p>
+                        <p class="product-price"></p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">p80</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/80.jpg)"></div>
+                        <p class="product-name">string beans</p>
+                        <p class="product-price"></p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">p81</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/81.jpg)"></div>
+                        <p class="product-name">beets "loose"</p>
+                        <p class="product-price"></p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">p82</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/82.jpg)"></div>
+                        <p class="product-name">bok choy</p>
+                        <p class="product-price"></p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">p84</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/84.jpg)"></div>
+                        <p class="product-name">brussel sprout</p>
+                        <p class="product-price"></p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">p86</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/86.jpg)"></div>
+                        <p class="product-name">burdock root</p>
+                        <p class="product-price"></p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">p88</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/88.jpg)"></div>
+                        <p class="product-name">cilantro</p>
+                        <p class="product-price"></p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">p89</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/no-img.png); pointer-events: none"></div>
+                        <p class="product-name">chicory</p>
+                        <p class="product-price"></p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">p90</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/90.jpeg)"></div>
+                        <p class="product-name">green cabbage</p>
+                        <p class="product-price"></p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">p91</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/91.jpeg)"></div>
+                        <p class="product-name">red cabbage</p>
+                        <p class="product-price"></p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">p92</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/92.jpg)"></div>
+                        <p class="product-name">nappa cabbage</p>
+                        <p class="product-price"></p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">p93</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/93.jpg)"></div>
+                        <p class="product-name">Green chard</p>
+                        <p class="product-price"></p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">p94</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/94.jpg)"></div>
+                        <p class="product-name">Carrots</p>
+                        <p class="product-price"></p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">p96</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/96.jpeg)"></div>
+                        <p class="product-name">Celery</p>
+                        <p class="product-price"></p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">p98</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/98.jpg)"></div>
+                        <p class="product-name">Collard green</p>
+                        <p class="product-price"></p>
+                     </div>
+                  </li>
+                  <li>
+                     <h3 class="product-code">p100</h3>
+                     <div class="li-padding">
+                        <div class="product-img" style="background-image: url(images/100.jpeg)"></div>
+                        <p class="product-name">Cucumber</p>
+                        <p class="product-price"></p>
+                     </div>
+                  </li>
+               </ul>
+            </li>
+         </ul>
+         <div class="scroll-top" title="Scroll to Top">
+            <img src="images/rocket.png" width="60%;">
+         </div>
+      </div>
+      <script src="https://code.jquery.com/jquery-3.3.1.js"></script>   
+      <script src="script/jquery.js"></script>
+       <script src="script/passcode.js"></script>
+      <script>
+         $('.fa-times-circle').click(function(){
+             $('.notification').css("display","none")
+         })
+      </script>
+   </body>
 </html>
