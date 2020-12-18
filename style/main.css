@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css?family=Sen&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Ropa+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Do+Hyeon&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+}
+.max-width{
+    max-width: 1200px;
+    margin: auto;
+    padding:80px;
+    padding-top: 0;
+    text-align: center;
+}
+
+.notification{
+    background-color: RGBA(31, 40, 50, 1.00);
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: #5cd1dd;
+    font-size: 1.5em;
+    font-family: 'Sen', sans-serif;
+  display: none;
+}
+.notification i{
+    font-size: 1.1em;
+    position: absolute;
+    top: 12px;
+    right: 30px;
+    cursor: pointer;
+    color: #f2f2f2;
+}
+.notification p{
+    margin: 0;
+}
+
+header{
+    max-width: 1200px;
+    line-height: 100px;
+    margin: auto;
+    height: 100px;
+    text-align: right;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+nav a{
+    text-decoration: none;
+    padding: 20px;
+    font-family: 'Sen', sans-serif;
+    text-transform: capitalize;
+    border-radius: 10px;
+    transition: .3s;
+    font-size: 1.2em;
+    color: RGBA(42, 52, 226, 1.00);
+}
+nav a.active{
+    background-color: RGBA(31, 40, 50, 1.00);
+    color: #5cd1dd;
+    -webkit-box-shadow: 0px 0px 17px 5px RGBA(82, 207, 222, .3);
+    -moz-box-shadow: 0px 0px 17px 5px RGBA(82, 207, 222, .3);
+    box-shadow: 0px 0px 17px 5px RGBA(82, 207, 222, .3);
+}
+.logo{
+/*
+    position: absolute;
+    left: 30px;
+*/
+    float: left;
+    width: 130px;
+    height: 100px;
+    background-image: url(../images/logo.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.search-wrap{
+    width: 100%;
+    margin-bottom: 30px;
+}
+#search-box{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 20px;
+    font-size: 1.3em;
+    outline: none;
+    border-radius: 10px;
+    background-color: RGBA(64, 78, 95, .1);
+    border: solid transparent;
+    transition: .3s;
+    padding-left: 55px;
+    padding-right: 20px;
+    margin-top: 30px;
+    font-family: 'Sen', sans-serif;
+    text-transform: capitalize;
+}
+#search-box::placeholder{
+    text-transform: none;
+}
+#search-box:focus{
+  border: solid RGBA(82, 207, 222, .5);
+  transition: .4s;
+  -webkit-box-shadow: 0px 0px 17px 5px RGBA(82, 207, 222, .2);
+  -moz-box-shadow: 0px 0px 17px 5px RGBA(82, 207, 222, .2);
+  box-shadow: 0px 0px 17px 5px RGBA(82, 207, 222, .2);
+}
+.search-icon{
+    width: 25px;
+    position: relative;
+    float: left;
+    bottom: 45px;
+    left: 20px;
+    pointer-events: none;
+    opacity: .5;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+ul.inner-ul li{
+    width: 200px;
+    display: inline-block;
+    overflow: hidden;
+    text-align: center;
+    border-radius: 10px;
+    margin: 7px;
+    border: 1px solid rgba(0,0,0,0.05);
+    -webkit-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.05);
+    -moz-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.05);
+    box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.05);
+}
+ul.inner-ul li h3{
+    padding: 10px;
+    margin: 0;
+}
+#product-list li.category-li{
+    display: block;
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 10px;
+/*    border: 1px solid rgba(0,0,0,0.05);*/
+    -webkit-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.04);
+    -moz-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.04);
+    box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.04);
+}
+h1.category-heading{
+    font-size: 3em;
+    color: RGBA(247, 205, 66, 1.00);
+    font-family: 'Lobster', cursive;
+    margin-top: 0;
+}
+
+.li-padding{
+    padding: 20px;
+}
+.product-img{
+    width: 90px;
+    height: 90px;
+    margin: auto;
+    border-radius: 50%;
+/*    background-color: whitesmoke;*/
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: .3s;
+}
+.product-img:hover{
+    cursor: zoom-in;
+    transition: .2s;
+    transform: scale(2.5);
+}
+.product-code{
+/*    font-family: 'Ropa Sans', sans-serif;*/
+    font-family: 'Do Hyeon', sans-serif;
+    color: RGBA(31, 40, 50, 1.00);
+    font-size: 1.5em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+}
+.product-name{
+    z-index: 100;
+    font-size: 1.2em;
+    font-family: 'Sen', sans-serif;
+    text-transform: capitalize;
+}
+.product-price{
+    font-family: 'Ropa Sans', sans-serif;
+    font-size: 1.4em;
+    letter-spacing: .1em;
+    color: yellowgreen;
+    margin: 0;
+    display: none;
+}
+
+.show-hide{
+  display: none;
+}
+.scroll-top{
+    text-align: center;
+    cursor: pointer;
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    line-height: 90px;
+    border-radius: 50%;
+    bottom: 50px;
+    right: 10px;
+    -webkit-box-shadow: 0px 0px 5px 2px rgba(0,0,0,.5);
+    -moz-box-shadow: 0px 0px 5px 2px rgba(0,0,0,.5);
+    box-shadow: 0px 0px 5px 2px rgba(0,0,0,.5);
+    background-color: RGBA(31, 40, 50, 1.00);
+    display: none;
+}
+.scroll-top img{
+    pointer-events: none;
+    transform: rotate(-45deg);
+    filter: invert(1);
+}
+.scroll-top .appear{
+    opacity: 1;
+    visibility: visible;
+    transition: .3s;
+}
+
+.page-content-notice{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+}
+.page-content-notice h1{
+    font-family: 'Anton', sans-serif;
+    text-transform: capitalize;
+    font-size: 3em;
+    letter-spacing: .1em;
+    color: #999;
+}
