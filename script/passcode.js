@@ -5,7 +5,7 @@ $(document).ready(function(){
     $(".password-modal").on("contextmenu",function(){
        return false;
     }); 
-    $("#search-box").prop('disabled', true);
+    //$("#search-box").prop('disabled', true);
     $("body").css("overflow","hidden")
 
     //hiding modal on passcode match
