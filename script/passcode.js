@@ -1,6 +1,6 @@
 $(document).ready(function(){
     //displaying modal on load
-    $(".password-modal").addClass("display-flex")
+    //$(".password-modal").addClass("display-flex")
     $("#pass").focus()
     $(".password-modal").on("contextmenu",function(){
        return false;
